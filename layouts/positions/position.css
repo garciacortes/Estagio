@@ -1,0 +1,54 @@
+div {
+  background-color: black;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+.position {
+  background-color: red;
+
+  /* top, left, right, bottom tem shorthend que é inset: value;
+  /*
+		Position relative
+		1. Mantem o normal flow, ou seja <divs>/<p> block
+		2. posso mover a posição do elemento usando top, bottom, left, right, podendo acabar por cima de outros elementos
+		3. z-index indica a posição do elemento em relação aos restante, se vai ficar atras/por cima etc, exemplo: z-index: -1; coloca atras dos outros elementos q tiver na msm posição
+	
+	*/
+  /* position: relative; */
+  /* top: 20px; */
+  /* left: 20px; */
+  /* z-index: -1; */
+  /* z-index: auto; mesmo nivel */
+
+  /*
+		Position: absolute
+		1. Não mantem o nomal flow
+		2. Matem a posição fixa
+		2. se eu não tiver um containingPai com position diferente de static o elemento segue o containing geral da pagina, caso houver seguira o containerPai
+		3. para visualizar descomentar o section
+	*/
+  /* position: absolute; */
+  /* top: 20px; */
+  /* left: 20px; */
+
+  /*
+		Position: fixed
+		1. Quase identico ao absolute
+		2. posição fixa na tela, não mantem normal flox
+		3. ele acompanha o scroll da tela, mantendo o elemento sempre visivel mas seguindo as posições setadas
+		4. ele sempre segue obrigatoriamente o containing Geral da pagina, independente se tem ou não um containing position na tagPai
+		5. coloca ele como primeiro elemento da tela
+	*/
+
+  position: fixed;
+  bottom: 20px;
+  left: 35px;
+  z-index: auto;
+}
+
+/* section {
+  position: relative;
+  border: black;
+} */

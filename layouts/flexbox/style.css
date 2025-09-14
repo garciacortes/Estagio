@@ -1,0 +1,93 @@
+.container {
+  border: dashed;
+  /* height: 30vh; */
+  /*
+    display flex, mantem todos os elemento inline colados, sem size do block
+  */
+  display: flex;
+  /* 
+    direção do flex
+    1. row -> item da esquerda -> direita
+    2. column -> item top -> bottom e matem largura inteira left -> right
+    3. reverse -> aplica nos dois acima invertendo ele
+    3.1 row -> direita -> esquerda
+    3.2 column -> bottom -> top
+  */
+  flex-direction: row;
+
+  /*
+    justify-content sempre mantera a ordenação do direction mudando apenas onde começa aparecer
+    1. flex-start -> os elementos começam da posição padrão do direction
+    2. flex-end -> os elementos começam da posição contraria do start do direction
+    3. center -> centraliza
+    4. space-evenly -> espaço iguais para todos os elementos, mas sem somar espaço, considerando colocar espaços entre as bordas iniciais e finais
+    5. space-around -> espaço iguais para todos os elementos, somando espaços quando coincidem, considerando colocar espaços entre as bordas iniciais e finais
+    6. space-between -> espaços iguais entre todos os elementos, desconsiderando colocar espaços entre as bordas iniciais e finais
+  */
+  /* justify-content: space-between; */
+  /*
+    align-items ordena seguindo o direction -> row(vertical), column(horizontal)
+    1. stretch -> mantem todos os elemento esticados no maximo do direction, so funciona se n tiver especificado algum tamanho na direção q ele deveria crescer
+    2. flex-start -> fica somente no topo
+    3. center -> centraliza
+    4. flex-end -> fica no final
+    5. baseline -> alinha na linha base dos elementos
+  */
+  /* align-items: center; */
+
+  /* gap: value; -> espaçamento somente entre elementos, sem colocar da borda ao elemento */
+
+  /* margin funciona se colocar no item para alinhas ele */
+
+  /*
+    flex-wrap: valie;
+    1. nowrap -> padrão do flex, mantem todos os elementos no container independente do tamanho de cada um
+    2. wrap -> mantem os elementos dentro do limite do container, quebrando para proxima linha os que ficariam de fora
+    3. ele sempre cria meio que um segundo container secundario, caso alinhamos no center com align-items, a segunda linha ficaria no centro do segundo container imaginario, para resolver isso podemos usar align-content que funciona igual o items porem transformando os containers(linhas) a mais como uma apenas, porem no space funciona entre as linhas
+  */
+  flex-wrap: nowrap;
+}
+
+.item {
+  --hue: 0;
+  text-align: center;
+  background-color: hsl(var(--hue), 100%, 70%);
+  /* width: 435px; */
+  /*
+    flex-basis
+    1. Ele coloca o tamanho seguindo a orientação da main do flex, se for column(altura), row(largura)
+  */
+  flex-basis: 3000px;
+
+  /*
+    flex-growth
+    1. É a quantidade de vezes q o item vai crescer em relação ao tamanho original, sempre priorizando o item q tem maior growth
+  */
+
+  /* 
+    flex-shrink: value
+    1. 0 -> desativo, 1 -> ativo, padrão dele
+    2. se desativo o elemento recebera obrigatoriamente o tamanho passado para ele, independente se o comportamento padrão do flex e diminuir o tamanho para comportar todos os elementos dentro do container
+    3. value pode ser mais que 0 e 1, porem quanto maior o numero for acima de 1 ira encolher mais, para encolher so um pouco mas se ser ativo colocar entre 0 e 1
+  */
+  /* flex-shrink: 0.2; */
+
+  /*
+    existe o flex shorhand, 
+    1. flex: initial -> growth: 0; shrink: 1; basis: auto;
+    2. flex: auto -> growth: 1; shrink: 1; basis: auto;
+    3. flex: none -> growth: 0; shrink: 0; basis: auto;
+    4. se eu passar flex: numero -> to dizendo q é growth, e por padrão shrink: 0
+    4.1 se eu passar flex: numeroUnidade(120px) -> to dizendo q é basis, e por padrão shrink/growth: 1
+    4.2 posso passar growth | shrink | basis, o basis so se for unidade tipo px, %, rm, etc. se for numero sem unidade segue a ordem growth -> shrink. Mas se passar os 3 a ordem importa
+  */
+  flex: auto;
+
+  /* 
+  1. order: 0 padrão
+  2. order: -1 joga pro inicio
+  3. order: 1 joga pro final
+  4. ele é apenas visual, não mexe na estrutura do html, ent dependendo da acessibilidade q os usuarios utilizando pode da conflito com o que esta sendo mostrado visual, principalmente se acessibilidade usa diretamente a estrutura html do site
+
+  /* aling-self serve para aplicar um align apenas no elemento que sendo acessado pelo CSS */
+}
