@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tags para Estruturação do Site</title>
+  </head>
+  <body>
+    <!--Cabeçalho da Pagina-->
+    <header>
+      <h1>Título, Cabeçalho, header</h1>
+      <!--Navegação da pagina, normalmente onde fica a tag <a href="#" />, 
+      lista de menu de navegação, não precisa obrigatoriamente estar dentro de outra tag tipo header
+      -->
+      <nav>
+        <a href="#">Navegação dentro da nav + header</a>
+        <ul>
+          <li>Home, ul + li dentro da nav</li>
+          <li>Sobre, ul + li dentro da nav</li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Conteudo Principal Da pagina-->
+    <main>
+      <h2>Conteudo Principal, dentro da main</h2>
+    </main>
+
+    <!--Utilizada para escrita de Artigos, normalmente pode aparecer substituindo a tag <main></main>
+        ele pode ou não estar dentro do main, pode conter ou não tag <section></section>
+    -->
+    <article>
+      <h1>Títutlo Article</h1>
+
+      <h2>Subtítulos sem section da Article</h2>
+      <section>
+        <h2>Subtítulos da section da Article</h2>
+      </section>
+    </article>
+
+    <!--Conteudo Extra, relacioado a algo da pagina, elemento não obrigatorio-->
+    <aside>
+      <h3>Conteudo reladcioado a algo da Pagina, aside</h3>
+
+      <!--Cria seções na Pagina, e literalmente um espaço para outros elementos, ele n é visual
+            Normalmente identificamos ele utilizando ID="Nome", ela pode aparecer dentro do aside
+        -->
+      <section id="Home">
+        <h2>Home, dentro de section + aside</h2>
+      </section>
+      <section id="Sobre">
+        <h2>Sobre mim, dentro de section + aside</h2>
+      </section>
+    </aside>
+
+    <!--Rodape da Pagina-->
+    <footer>
+      <h6>Rodape da Pagina, footer</h6>
+    </footer>
+  </body>
+</html>

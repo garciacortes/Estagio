@@ -1,0 +1,81 @@
+body {
+  /* background tem o shorthand, onde ele é somente background: value; e ele ignora todos os outros
+  /* Adiciona a imagem como background */
+  background-image: url("https://xesque.rocketseat.dev/platform/1709658495701.svg");
+  padding: 50px;
+
+  /* faz com que ela n se repita */
+  background-repeat: no-repeat;
+
+  /* 
+    alinhamento da imagem 
+    pode ser right | left | center para o position-x
+    pode ser top | bottom | center
+    Existe a versão shortehand sem o -x ou -y, onde primeiro eixo X dps Y
+  */
+  /*background-position-x: center;
+  background-position-y: bottom;*/
+
+  background-position: center;
+  /* 
+    Tamanho da imagem
+    contain -> se adapta ao tamanho da tela
+    cover -> ocupar todo o espaço disponivel
+  */
+  background-size: cover;
+}
+
+p {
+  /* Dessa forma se ele não encontrar a primeira fonte, ele tenta a segunda, e assim por diante */
+  /* font-family e a fonte do texto */
+  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
+  /* 
+    Podemos Usar fonte da Internet webfontes, normalmente google fonts
+    formas de importar:
+    1- importamos colocando o <link> dentro do <head>, recomendado e mais rapido
+    2- podemos usar @import direto no .css porem é menos recomendado, mais lento
+
+   */
+  font-size: 20px;
+
+  font-style: normal;
+  /* usado para bold(negrito), podendo ser a intensidade(valor) ou bold */
+  font-weight: bold;
+
+  color: blue;
+  /*
+    Usado para transformação no texto
+    - uppercase -> Todo texto em maiúsculo
+    - lowercase -> Todo texto em minusculo
+    - capitalize -> Toda Primeira Letra de cada palavra maiúsculo
+  */
+  text-transform: capitalize;
+
+  /* Alinhamento do texto */
+  text-align: justify;
+
+  /* Tamanho da linha, normalmente usado com multiplicador */
+  line-height: 1.5rem;
+
+  /* Distancia entre letra */
+  letter-spacing: 3px;
+
+  /* Distancia entre palavras */
+  word-spacing: 2px;
+}
+
+mark {
+  color: red;
+}
+
+a {
+  /*
+    modifica a linha no texto, pode conter color/tipo/tamanho da linha igual na border
+    - none -> Remove a linha, muito usado em links
+    - line-through -> Cortando a palavra no meio
+    - overline -> Em cima do texto
+  */
+  text-decoration: none;
+  color: black;
+}
