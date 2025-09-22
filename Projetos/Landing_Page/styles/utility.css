@@ -30,6 +30,18 @@
   gap: 1rem;
 }
 
+.flex {
+  display: flex;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+}
+
 @media (width >= 80em) {
   .container {
     --max-width: 80rem;
@@ -40,7 +52,7 @@
   }
 
   .even-columns {
-    /* transforma os elementos para q no desktop fiquem lado a lado */  
+    /* transforma os elementos para q no desktop fiquem lado a lado */
     grid-auto-flow: column;
     grid-auto-columns: 1rf;
   }
